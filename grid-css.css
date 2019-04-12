@@ -1,0 +1,306 @@
+@charset "utf-8";
+@import url("print.css");
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+.wraper {
+    display: grid;
+    margin: 25px 10%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto, auto, 2fr, 1fr, 1fr, 1fr, 1fr;
+    grid-gap: 20px 30px;
+    grid-template-areas: "header header header" "nav nav nav" "article-1 section-1 section-1" "article-1 section-2 section-3" "article-3 section-4 section-5" "article-4 section-6 section-7" "article-5 section-8 section-9" "article-6 section-10 article-7" "footer footer footer";
+}
+header {
+    grid-area: header;
+    background-color: #D0AB28
+}
+header h1 {
+    font-family: Montserrat;
+    text-align: center;
+    grid-column-end: 4;
+}
+nav {
+    text-align: center;
+    grid-area: nav;
+    font-size: 1.25em;
+}
+nav ul {
+    text-align: center;
+}
+nav li {
+    display: inline-block;
+}
+section.introductions {
+    grid-area: section-1;
+    grid-column: 2/4;
+}
+.introductions h1 {
+    font-size: 8em;
+    text-align: center;
+}
+article.table {
+    grid-area: article-1;
+}
+section.cpu {
+    grid-area: section-2;
+}
+section.cpu-cooler {
+    grid-area: section-3;
+}
+article.image1 {
+    grid-area: article-3;
+}
+secton.mobo {
+    grid-area: section-4;
+}
+section.ram {
+    grid-area: section-5;
+}
+article.image2 {
+    grid-area: article-4;
+}
+section.storage1 {
+    grid-area: section-6;
+}
+section.storage2 {
+    grid-area: section-7;
+}
+article.image3 {
+    grid-area: article-5;
+}
+section.gpu {
+    grid-area: section-8;
+}
+section.case {
+    grid-area: section-9;
+}
+article.image4 {
+    grid-area: article-6;
+}
+section.psu {
+    grid-area: section-10;
+}
+article.image5 {
+    grid-area: article-7;
+}
+footer {
+    grid-area: footer;
+    text-align: center;
+}
+article {
+    padding: 0 1em;
+}
+.wraper h1 {
+    font-family: Montserrat;
+    font-size: 3em;
+}
+.wraper h2 {
+    font-family: Merriweather;
+}
+.wraper h3 {
+    font-family: Montserrat;
+    text-align: center;
+    font-size: 1.5em;
+}
+.wraper p {
+    font-family: Merriweather;
+    font-size: 1.2em
+}
+table {
+    text-align: center;
+}
+table tr {
+    font-family: Montserrat;
+}
+table td {
+    font-family: Merriweather;
+    line-height: 2em;
+}
+
+@media (min-width:817px) and (max-width: 1329px) {
+.wraper {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: grid;
+}
+header h1 {
+    font-size: 3em;
+}
+nav {
+    font-size: 1.2em;
+}
+.introductions h1 {
+    font-size: 2em;
+}
+h2 {
+    font-size: 1.2em;
+}
+.wraper h3 {
+    font-size: 1em;
+}
+.wraper p {
+    font-size: .8em;
+}
+table tr td {
+font size: .9em;
+}
+table {
+    font-size: 1em;
+}
+}
+
+@media (min-width:0px) and (max-width:816px) {
+.wraper {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: grid;
+}
+header h1 {
+    font-size: 2em;
+}
+nav {
+    font-size: .8em;
+}
+.introductions h1 {
+    font-size: 1em;
+}
+h2 {
+    font-size: .8em;
+}
+.wraper h3 {
+    font-size: .8em;
+}
+.wraper p {
+    font-size: .68em;
+}
+.table table {
+    font-size: .54em;
+}
+table tr .CN {
+    font-size: 0.61em;
+}
+img {
+    width: 80%;
+    height: auto;
+}
+article {
+    padding: 1em .8em;
+}
+.table {
+    padding-right: 1em;
+}
+}
+
+@media print {
+.wraper {
+    margin-top: .25in;
+    margin-bottom: .5in;
+    margin-left: .25in;
+    margin-right: .25in,
+}
+header h1, h3, table tr {
+    font-family: Montserrat;
+}
+header h2, p table td {
+    font-family: Merriweather;
+}
+header {
+    font-size: 24pt;
+}
+nav {
+    font-size: 9.6pt;
+}
+.introductions h1 {
+    font-size: 24pt;
+}
+.wraper h1 {
+    font-size: 18pt;
+}
+.wraper h2 {
+    font-size: 9.6pt;
+}
+.wraper h3 {
+    font-size: 9.6pt;
+}
+.wraper p {
+    font-size: 8pt;
+}
+	table tr .CN{
+		font-size: 7.3pt;
+	}
+	
+	img{ width: 80%; height: auto;
+page-break-inside: avoid;
+	}
+	
+	article{padding: 12pt 9.6pt;}
+	.table{padding-right: 12pt;}
+	
+	.case, article .image3{page-break-after: always;}
+	
+	
+}
+/*
+
+>> not really sure of the code above, trying to make the site when Ctrl+P,
+the image at the bottom of the page to hop to the next page. 
+<<
+
+
+
+
+extra code that i thought of using, 
+will try to do responsive and decrease amount of colums, to 1 at the end (smallest)
+
+grid-template-columns: 1fr, 1fr;
+    grid-template-rows: 1fr,1fr,2fr,2fr,1fr,1fr,1fr,1fr,1fr;
+    grid-gap: 10px 0;
+    grid-template-area: "header header"  "nav nav"  "section-1 section-1"
+		"article-1 article-1"  "section-2 section-3" 
+		"section-4 article-3" 
+		"article-4 section-5"
+		"section-6 article-5"  "article-6 section-7" 
+		"section-8 article-7" 
+		"section-9 section-10" 
+		"footer footer"
+}
+	header, nav, section-1, article-1,  footer{grid-column-end: 2;}
+	
+	
+	
+	article {
+    padding: 0 1em;
+}
+.wraper h1 {
+    font-family: Montserrat;
+    font-size: 2em;
+}
+.wraper h2 {
+    font-family: Merriweather;
+}
+.wraper h3 {
+    font-family: Montserrat;
+    text-align: center;
+    font-size: 1em;
+}
+.wraper p {
+    font-family: Merriweather;
+    font-size: 1em  
+	*/
+	
+	
+	
+	
+/*header, nav, section.introductions, article.table {grid-column:1/3;} */
+	
+
+/*	article.image4, article.image6,section.cpu, section.mobo, section.storage1, section.gpu, section.case {grid-column: 1/2}  */
+
+/*article.image3, article.image5, article.image7, section.cpu-cooler, section.ram, section.storage2, section.psu {grid-column:2/3}*/
+}
+}

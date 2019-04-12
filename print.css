@@ -1,0 +1,49 @@
+@media print {
+.wraper {
+    margin-top: .25in;
+    margin-bottom: .5in;
+    margin-left: .25in;
+    margin-right: .25in,
+}
+header h1, h3, table tr {
+    font-family: Montserrat;
+}
+header h2, p table td {
+    font-family: Merriweather;
+}
+header {
+    font-size: 24pt;
+}
+nav {
+    font-size: 9.6pt;
+}
+.introductions h1 {
+    font-size: 24pt;
+}
+.wraper h1 {
+    font-size: 18pt;
+}
+.wraper h2 {
+    font-size: 9.6pt;
+}
+.wraper h3 {
+    font-size: 9.6pt;
+}
+.wraper p {
+    font-size: 8pt;
+}
+	table tr .CN{
+		font-size: 7.3pt;
+	}
+	
+	img{ width: 80%; height: auto;
+page-break-inside: avoid;
+	}
+	
+	article{padding: 12pt 9.6pt;}
+	.table{padding-right: 12pt;}
+	
+	.case, article .image3{page-break-after: always;}
+	
+	
+}
